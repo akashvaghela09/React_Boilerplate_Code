@@ -1,1 +1,1 @@
-# Template_React_Redux
+# React_Boilerplate_Code
