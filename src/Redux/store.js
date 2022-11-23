@@ -1,10 +1,8 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
 import { reducer as appReducer } from './app/reducer'
-import { authReducer } from './auth/reducer'
 
 const rootReducer = combineReducers({
-    app: appReducer,
-    auth: authReducer
+    app: appReducer
 })
 
 const logger = (store) => (next) => (action) => {

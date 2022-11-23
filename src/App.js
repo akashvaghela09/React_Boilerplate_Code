@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from  './App.module.css';
-import { Allroutes } from './Routes/AllRoutes';
+import './App.css';
+import { Counter } from "./components/Counter";
 
 function App() {
   return (
-    <div className={styles.App}>
-      <Allroutes />
+    <div className="App min-h-screen flex items-center justify-center bg-slate-300">
+      <Counter />
     </div>
   );
 }

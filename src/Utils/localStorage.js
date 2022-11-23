@@ -1,4 +1,4 @@
-function loadData(key) {
+const loadData = (key) => {
     try {
         let data = localStorage.getItem(key)
         data = JSON.parse(data)
@@ -8,9 +8,12 @@ function loadData(key) {
     }
 }
 
-
-function saveData(key, data) {
+const saveData = (key, data) => {
     localStorage.setItem(key, JSON.stringify(data));
 }
 
-export { loadData, saveData}
+const clearData = () => {
+    localStorage.clear();
+}
+
+export { loadData, saveData, clearData }
