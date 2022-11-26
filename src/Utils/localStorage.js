@@ -1,19 +1,23 @@
 const loadData = (key) => {
     try {
         let data = localStorage.getItem(key)
-        data = JSON.parse(data)
+        data = JSON.parse(data);
         return data;
     } catch (err) {
-        return undefined
+        return undefined;
     }
-}
+};
 
 const saveData = (key, data) => {
     localStorage.setItem(key, JSON.stringify(data));
-}
+};
 
 const clearData = () => {
     localStorage.clear();
-}
+};
 
-export { loadData, saveData, clearData }
+const waitFor = async (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+export { loadData, saveData, clearData, waitFor };
